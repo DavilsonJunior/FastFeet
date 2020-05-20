@@ -8,8 +8,8 @@ class UserController {
 
     const user = await User.findAll({
       attributes: ['id', 'name', 'email', 'type'],
-      limit: 10,
-      offset: (page - 1) * 20,
+      limit: 5,
+      offset: (page - 1) * 5,
     });    
 
     return res.json(user);

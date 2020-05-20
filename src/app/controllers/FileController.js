@@ -10,7 +10,13 @@ class FileController {
     }, 
   );
 
-    return res.json(file);
+    return res.json({
+      id: file.id,
+      name: file.name,
+      path: file.path,
+      createdAt: file.createdAt,
+      updatedAt: file.updatedAt,
+    });
    }
 }
 
